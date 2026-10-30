@@ -73,21 +73,26 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Noah & Emma — 20 February 2027" },
+      { title: "Wedding Ceremony — Harry John & Dr. Anju Agnes Tom" },
       {
         name: "description",
         content:
-          "Together with their families, Noah and Emma request the honour of your presence as they begin their forever. 20 February 2027, St. Mary's Church.",
+          "Wedding Ceremony of Harry John & Dr. Anju Agnes Tom. Sunday, 1 November 2026 at St. Joseph's Church, Kizhathadiyur, Pala followed by Reception at Sun Star Convention Centre, Arunapuram.",
       },
-      { property: "og:title", content: "Noah & Emma — 20 February 2027" },
+      { property: "og:title", content: "Wedding Ceremony — Harry John & Dr. Anju Agnes Tom" },
       {
         property: "og:description",
-        content: "Together with their families, Noah and Emma request the honour of your presence as they begin their forever. 20 February 2027, St. Mary's Church.",
+        content:
+          "Sunday, 1 November 2026 · St. Joseph's Church, Kizhathadiyur, Pala & Sun Star Convention Centre, Arunapuram. Mark 10:9.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Noah & Emma — 20 February 2027" },
-      { name: "twitter:description", content: "Together with their families, Noah and Emma request the honour of your presence as they begin their forever. 20 February 2027, St. Mary's Church." },
+      { name: "twitter:title", content: "Wedding Ceremony — Harry John & Dr. Anju Agnes Tom" },
+      {
+        name: "twitter:description",
+        content:
+          "Sunday, 1 November 2026 · St. Joseph's Church, Kizhathadiyur, Pala & Sun Star Convention Centre, Arunapuram. Mark 10:9.",
+      },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c44f6b7e-38e9-4205-a38d-46592ca4ebc0/id-preview-4426dc8c--b4f8d89d-eea4-4a2e-b264-70fa7942236f.lovable.app-1783741208945.png" },
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c44f6b7e-38e9-4205-a38d-46592ca4ebc0/id-preview-4426dc8c--b4f8d89d-eea4-4a2e-b264-70fa7942236f.lovable.app-1783741208945.png" },
     ],

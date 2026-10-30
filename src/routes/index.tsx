@@ -9,24 +9,24 @@ import { RsvpForm } from "@/components/wedding/RsvpForm";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Wedding Invitation — Abin Benny & Rinu Vincent" },
+      { title: "Wedding Ceremony — Harry John & Dr. Anju Agnes Tom" },
       {
         name: "description",
         content:
-          "Mr. Benny Mathew & Mrs. Elsamma Benny cordially invite your esteemed presence and prayerful blessings on the auspicious occasion of the wedding of their beloved son Abin Benny with Rinu Vincent on Thursday, 22 October 2026.",
+          "Mrs. Suja Mathew & Dr. K. P. John cordially invite your esteemed presence and prayerful blessings on the auspicious occasion of the Wedding Ceremony of their son Harry John with Dr. Anju Agnes Tom on Sunday, 1 November 2026.",
       },
-      { property: "og:title", content: "Wedding Invitation — Abin Benny & Rinu Vincent" },
+      { property: "og:title", content: "Wedding Ceremony — Harry John & Dr. Anju Agnes Tom" },
       {
         property: "og:description",
-        content: "“Therefore what God has joined together, let no one separate.” — Matthew 19:6 | Wedding of Abin Benny & Rinu Vincent",
+        content: "“Therefore what God has joined together, let no one separate.” — Mark 10:9 | Wedding of Harry John & Dr. Anju Agnes Tom",
       },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "/images/og-preview.jpg" },
       { property: "og:image:secure_url", content: "/images/og-preview.jpg" },
       { property: "og:image:type", content: "image/jpeg" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Wedding Invitation — Abin Benny & Rinu Vincent" },
-      { name: "twitter:description", content: "“Therefore what God has joined together, let no one separate.” — Matthew 19:6 | Wedding of Abin Benny & Rinu Vincent" },
+      { name: "twitter:title", content: "Wedding Ceremony — Harry John & Dr. Anju Agnes Tom" },
+      { name: "twitter:description", content: "“Therefore what God has joined together, let no one separate.” — Mark 10:9 | Wedding of Harry John & Dr. Anju Agnes Tom" },
       { name: "twitter:image", content: "/images/og-preview.jpg" },
     ],
     links: [
@@ -40,7 +40,7 @@ export const Route = createFileRoute("/")({
 });
 
 const galleryImgs: { src: string; alt: string; cls: string; pos?: string }[] = [
-  { src: "/images/wedding-01.jpg", alt: "Abin & Rinu — In Holy Matrimony", cls: "col-span-2 row-span-2", pos: "object-[center_60%]" },
+  { src: "/images/wedding-01.jpg", alt: "Harry & Anju — In Holy Matrimony", cls: "col-span-2 row-span-2", pos: "object-[center_60%]" },
   { src: "/images/wedding-02.jpg", alt: "A Sacred Promise", cls: "col-span-1 row-span-1", pos: "object-[center_65%]" },
   { src: "/images/wedding-03.jpg", alt: "Two Hearts United", cls: "col-span-1 row-span-1", pos: "object-[center_55%]" },
   { src: "/images/wedding-04.jpg", alt: "Cherished Moments", cls: "col-span-1 row-span-1", pos: "object-[center_50%]" },
@@ -395,7 +395,7 @@ function HeroVideo() {
           “Therefore what God has joined together, let no one separate.”
         </p>
         <p className="animate-fade-up font-sans-ui text-[10px] sm:text-[11px] uppercase tracking-[0.4em] text-sand/80 font-semibold mb-2">
-          MATTHEW 19:6
+          MARK 10:9
         </p>
 
         <p className="animate-fade-up font-sans-ui text-[11px] sm:text-[13px] uppercase tracking-[0.45em] text-ivory/95 font-medium mt-1">
@@ -404,7 +404,7 @@ function HeroVideo() {
 
         <div className="animate-fade-up mt-3 sm:mt-5 flex flex-col items-center gap-1 sm:gap-2" style={{ animationDelay: "0.2s" }}>
           <span className="font-script text-5xl sm:text-7xl md:text-8xl text-sand drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)] leading-tight">
-            Abin Benny
+            Harry John
           </span>
 
           <div className="flex items-center justify-center gap-4 my-1 text-sand">
@@ -412,7 +412,7 @@ function HeroVideo() {
           </div>
 
           <span className="font-script text-5xl sm:text-7xl md:text-8xl text-sand drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)] leading-tight">
-            Rinu Vincent
+            Dr. Anju Agnes Tom
           </span>
         </div>
 
@@ -421,11 +421,11 @@ function HeroVideo() {
         </p>
 
         <div className="animate-fade-up mt-4 sm:mt-5 flex flex-wrap items-center justify-center gap-2 sm:gap-4 font-sans-ui text-xs sm:text-sm uppercase tracking-[0.2em] text-sand" style={{ animationDelay: "0.6s" }}>
-          <span>Thursday, 22 October 2026</span>
+          <span>Sunday, 1 November 2026</span>
           <span className="hidden sm:inline text-ivory/40">•</span>
-          <span>10:30 AM</span>
+          <span>12:15 PM</span>
           <span className="hidden sm:inline text-ivory/40">•</span>
-          <span>St. Mary's Church, Mevada, Pala</span>
+          <span>St. Joseph's Church, Kizhathadiyur, Pala</span>
         </div>
 
         {/* Premium Gold Glassmorphic Location Button */}
@@ -480,7 +480,7 @@ function WelcomeMessageSection() {
             “Therefore what God has joined together, let no one separate.”
           </p>
           <p className="mt-1 font-sans-ui text-xs uppercase tracking-[0.35em] text-primary/75 font-bold">
-            MATTHEW 19:6
+            MARK 10:9
           </p>
         </div>
 
@@ -493,13 +493,13 @@ function WelcomeMessageSection() {
         </div>
 
         {/* Heartfelt Invitation Heading */}
-        <div className="text-center max-w-2xl mx-auto">
+        <div className="text-center max-w-3xl mx-auto">
           <Ornament label="With Joyful Hearts" />
           <h2 className="mt-3 font-display text-4xl sm:text-5xl text-primary font-semibold">
             Two Lives, One Sacred Journey
           </h2>
           <p className="font-body text-base sm:text-lg italic text-foreground/80 leading-relaxed mt-4">
-            With hearts full of love, faith, and gratitude, together with our families, we joyfully invite you to share in our celebration as we unite our lives in holy matrimony.
+            Mrs. Suja Mathew &amp; Dr. K. P. John have great pleasure in inviting you with family on the auspicious occasion of the Wedding Ceremony of their son
           </p>
         </div>
 
@@ -507,37 +507,47 @@ function WelcomeMessageSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch max-w-4xl mx-auto mt-10">
           
           {/* Groom Card */}
-          <div className="rounded-sm border border-primary/25 bg-secondary/30 p-8 sm:p-10 text-center shadow-[var(--shadow-soft)] flex flex-col justify-between">
+          <div className="rounded-sm border border-primary/25 bg-secondary/30 p-7 sm:p-9 text-center shadow-[var(--shadow-soft)] flex flex-col justify-between">
             <div>
               <span className="font-sans-ui text-[10px] uppercase tracking-[0.4em] text-primary/70 font-semibold block mb-2">
                 The Groom
               </span>
               <h3 className="font-script text-4xl sm:text-5xl text-primary font-bold">
-                Abin Benny
+                Harry John
               </h3>
             </div>
-            <div className="mt-6 pt-4 border-t border-primary/15 text-foreground/80 font-body text-sm sm:text-base leading-relaxed">
-              <p className="font-medium text-foreground">Son of Mr. Benny Mathew &amp; Mrs. Elsamma Benny</p>
-              <p className="font-sans-ui text-xs uppercase tracking-wider text-primary/70 mt-1">
-                Pulickal House, Mevada, Pala
+            <div className="mt-6 pt-4 border-t border-primary/15 text-foreground/85 font-body text-sm sm:text-base leading-relaxed space-y-2">
+              <p className="font-medium text-foreground text-base">
+                Son of Mrs. Suja Mathew &amp; Dr. K. P. John
+              </p>
+              <p className="font-sans-ui text-xs uppercase tracking-wider text-primary/75">
+                Kadukappillil House, Palackattumala P.O., Marangattupilly, Kottayam District
+              </p>
+              <p className="font-body text-xs italic text-foreground/70 pt-2 border-t border-primary/10">
+                (Grandson of late Mrs. Annamma Philip &amp; Mr. K. J. Philip, Kadukappillil, Palackattumala and Mrs. Aleykutty K. S. &amp; late Mr. P. V. Mathai, Punnolil, Paingottoor)
               </p>
             </div>
           </div>
 
           {/* Bride Card */}
-          <div className="rounded-sm border border-primary/25 bg-secondary/30 p-8 sm:p-10 text-center shadow-[var(--shadow-soft)] flex flex-col justify-between">
+          <div className="rounded-sm border border-primary/25 bg-secondary/30 p-7 sm:p-9 text-center shadow-[var(--shadow-soft)] flex flex-col justify-between">
             <div>
               <span className="font-sans-ui text-[10px] uppercase tracking-[0.4em] text-primary/70 font-semibold block mb-2">
                 The Bride
               </span>
               <h3 className="font-script text-4xl sm:text-5xl text-primary font-bold">
-                Rinu Vincent
+                Dr. Anju Agnes Tom
               </h3>
             </div>
-            <div className="mt-6 pt-4 border-t border-primary/15 text-foreground/80 font-body text-sm sm:text-base leading-relaxed">
-              <p className="font-medium text-foreground">Daughter of Mr. Vincent P. Paul &amp; Mrs. Sily Vincent</p>
-              <p className="font-sans-ui text-xs uppercase tracking-wider text-primary/70 mt-1">
-                Pulikkalayil House, Madakkathaanam, Ernakulam
+            <div className="mt-6 pt-4 border-t border-primary/15 text-foreground/85 font-body text-sm sm:text-base leading-relaxed space-y-2">
+              <p className="font-medium text-foreground text-base">
+                Daughter of Mrs. Jessy Thomas &amp; Mr. K. J. Thomas
+              </p>
+              <p className="font-sans-ui text-xs uppercase tracking-wider text-primary/75">
+                Kollikulavil House, Koovappally, Kanjirappally, Kottayam District
+              </p>
+              <p className="font-body text-xs italic text-foreground/70 pt-2 border-t border-primary/10">
+                (Granddaughter of Late Mariakutty &amp; Late K. V. Joseph, Kollikulavil, Koovappally, and Late Aleykutty Joseph &amp; Late Adv. P. J. Joseph Panamthottam, Chunkappara)
               </p>
             </div>
           </div>
@@ -574,102 +584,14 @@ function EventsBreakdownSection() {
             Programme &amp; Celebrations
           </h2>
           <p className="mt-3 font-body text-base sm:text-lg italic text-foreground/80 max-w-xl mx-auto">
-            We cordially invite your esteemed presence and prayerful blessings on the auspicious celebrations of our union.
+            We cordially invite your esteemed presence and prayerful blessings on the auspicious occasion of our Holy Matrimony and Reception.
           </p>
         </div>
 
         {/* Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           
-          {/* 1. Engagement Card */}
-          <div className="relative rounded-md bg-ivory p-2 sm:p-2.5 shadow-[var(--shadow-frame)] border border-primary/20 transition-all duration-300 hover:shadow-2xl">
-            <div className="border border-[#C59B27]/40 rounded-sm p-6 sm:p-8 flex flex-col justify-between h-full bg-gradient-to-b from-[#FFFDF9] via-[#FAF6EE] to-[#F5EEDC]">
-              
-              <div>
-                {/* Header Badge & Title */}
-                <div className="text-center">
-                  <div className="flex items-center justify-center gap-2 mb-2 text-[#C59B27]">
-                    <span className="h-px w-8 bg-gradient-to-r from-transparent to-[#C59B27]/60" />
-                    <span className="text-xs">✦</span>
-                    <span className="h-px w-8 bg-gradient-to-l from-transparent to-[#C59B27]/60" />
-                  </div>
-                  <span className="font-sans-ui text-[10px] sm:text-[11px] uppercase tracking-[0.35em] text-[#C59B27] font-bold block mb-1">
-                    Solemn Betrothal
-                  </span>
-                  <h3 className="font-display text-3xl sm:text-4xl text-primary font-bold tracking-tight">
-                    The Engagement
-                  </h3>
-                  <p className="font-script text-2xl sm:text-3xl text-primary/80 mt-1">
-                    A Promise of Forever
-                  </p>
-                </div>
-
-                {/* Date & Time Divider */}
-                <div className="my-6 py-3 border-y border-primary/15 text-center bg-secondary/30">
-                  <span className="font-display text-lg sm:text-xl font-bold tracking-wide text-primary block">
-                    Monday, 19 October 2026
-                  </span>
-                  <span className="font-sans-ui text-xs uppercase tracking-[0.3em] text-[#C59B27] font-bold mt-1 block">
-                    11:45 AM
-                  </span>
-                </div>
-
-                {/* Event Locations */}
-                <div className="space-y-6 text-center">
-                  {/* Ceremony */}
-                  <div className="space-y-1">
-                    <span className="font-sans-ui text-[10px] uppercase tracking-[0.3em] text-primary/70 font-semibold block">
-                      Sacred Ceremony
-                    </span>
-                    <h4 className="font-display text-2xl font-bold text-primary">
-                      Vimala Matha Church
-                    </h4>
-                    <p className="font-body text-sm text-foreground/75">
-                      Kadalikkad, Muvattupuzha
-                    </p>
-                  </div>
-
-                  {/* Divider */}
-                  <div className="flex items-center justify-center gap-3 text-primary/25">
-                    <span className="h-px w-12 bg-primary/20" />
-                    <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" className="text-[#C59B27]">
-                      <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-                    </svg>
-                    <span className="h-px w-12 bg-primary/20" />
-                  </div>
-
-                  {/* Reception */}
-                  <div className="space-y-1">
-                    <span className="font-sans-ui text-[10px] uppercase tracking-[0.3em] text-primary/70 font-semibold block">
-                      Fellowship &amp; Luncheon
-                    </span>
-                    <h4 className="font-display text-2xl font-bold text-primary">
-                      Parish Auditorium
-                    </h4>
-                    <p className="font-body text-sm italic text-foreground/75">
-                      Directly following the sacred service
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Action Button */}
-              <div className="mt-8 pt-5 border-t border-primary/15">
-                <a
-                  href="https://www.google.com/maps/search/?api=1&query=Vimala+Matha+Church+Kadalikkad"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-sm bg-primary text-ivory hover:bg-wine-deep text-xs font-sans-ui uppercase tracking-[0.2em] font-semibold shadow-sm transition-all duration-300 hover:shadow-md cursor-pointer"
-                >
-                  <span>📍 Kadalikkad Church Location</span>
-                  <span className="text-sm">↗</span>
-                </a>
-              </div>
-
-            </div>
-          </div>
-
-          {/* 2. Wedding Card */}
+          {/* 1. Wedding Ceremony Card */}
           <div className="relative rounded-md bg-ivory p-2 sm:p-2.5 shadow-[var(--shadow-frame)] border-2 border-wine/40 transition-all duration-300 hover:shadow-2xl">
             <div className="border border-wine/30 rounded-sm p-6 sm:p-8 flex flex-col justify-between h-full bg-gradient-to-b from-[#FFFDF9] via-[#FAF6EE] to-[#F7EFE6]">
               
@@ -685,7 +607,7 @@ function EventsBreakdownSection() {
                     Holy Matrimony
                   </span>
                   <h3 className="font-display text-3xl sm:text-4xl text-primary font-bold tracking-tight">
-                    The Wedding
+                    The Wedding Ceremony
                   </h3>
                   <p className="font-script text-2xl sm:text-3xl text-wine mt-1">
                     United in Holy Grace
@@ -695,70 +617,38 @@ function EventsBreakdownSection() {
                 {/* Date & Time Divider */}
                 <div className="my-6 py-3 border-y border-wine/20 text-center bg-wine/[0.04]">
                   <span className="font-display text-lg sm:text-xl font-bold tracking-wide text-primary block">
-                    Thursday, 22 October 2026
+                    Sunday, 1 November 2026
                   </span>
                   <span className="font-sans-ui text-xs uppercase tracking-[0.3em] text-wine font-bold mt-1 block">
-                    10:30 AM
+                    12:15 PM
                   </span>
                 </div>
 
                 {/* Event Locations */}
-                <div className="space-y-6 text-center">
-                  {/* Ceremony */}
+                <div className="space-y-4 text-center">
                   <div className="space-y-1">
                     <span className="font-sans-ui text-[10px] uppercase tracking-[0.3em] text-wine font-semibold block">
-                      Nuptial Blessing &amp; Holy Mass
+                      Sacred Nuptial Blessing
                     </span>
                     <h4 className="font-display text-2xl font-bold text-primary">
-                      St. Mary's Church
+                      St. Joseph's Church
                     </h4>
                     <p className="font-body text-sm text-foreground/75">
-                      Mevada, Pala, Kottayam
-                    </p>
-                  </div>
-
-                  {/* Divider */}
-                  <div className="flex items-center justify-center gap-3 text-wine/30">
-                    <span className="h-px w-12 bg-wine/25" />
-                    <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" className="text-wine">
-                      <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-                    </svg>
-                    <span className="h-px w-12 bg-wine/25" />
-                  </div>
-
-                  {/* Reception */}
-                  <div className="space-y-1">
-                    <span className="font-sans-ui text-[10px] uppercase tracking-[0.3em] text-wine font-semibold block">
-                      Wedding Banquet &amp; Reception
-                    </span>
-                    <h4 className="font-display text-2xl font-bold text-primary">
-                      St. George's Church Mutholy Auditorium
-                    </h4>
-                    <p className="font-body text-sm italic text-foreground/75">
-                      Mutholy, Pala · Following the sacred service
+                      Kizhathadiyur, Pala
                     </p>
                   </div>
                 </div>
               </div>
 
-              {/* Action Buttons */}
-              <div className="mt-8 pt-5 border-t border-primary/15 grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {/* Action Button */}
+              <div className="mt-8 pt-5 border-t border-primary/15">
                 <a
-                  href="https://www.google.com/maps/search/?api=1&query=St+Marys+Church+Mevada+Pala"
+                  href="https://www.google.com/maps/search/?api=1&query=St+Josephs+Church+Kizhathadiyur+Pala"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 py-3 px-3 rounded-sm bg-primary text-ivory hover:bg-wine-deep text-xs font-sans-ui uppercase tracking-[0.2em] font-semibold shadow-sm transition-all duration-300 hover:shadow-md cursor-pointer"
+                  className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-sm bg-primary text-ivory hover:bg-wine-deep text-xs font-sans-ui uppercase tracking-[0.2em] font-semibold shadow-sm transition-all duration-300 hover:shadow-md cursor-pointer"
                 >
-                  <span>📍 Church Map</span>
-                  <span className="text-sm">↗</span>
-                </a>
-                <a
-                  href="https://maps.app.goo.gl/RzZrRmYzSAMGoSVz6"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 py-3 px-3 rounded-sm border border-primary/30 bg-secondary/70 hover:bg-secondary text-primary text-xs font-sans-ui uppercase tracking-[0.2em] font-semibold transition-all duration-300 hover:border-primary cursor-pointer"
-                >
-                  <span>📍 Reception Map</span>
+                  <span>📍 Church Location Map</span>
                   <span className="text-sm">↗</span>
                 </a>
               </div>
@@ -766,6 +656,91 @@ function EventsBreakdownSection() {
             </div>
           </div>
 
+          {/* 2. Wedding Reception Card */}
+          <div className="relative rounded-md bg-ivory p-2 sm:p-2.5 shadow-[var(--shadow-frame)] border border-primary/20 transition-all duration-300 hover:shadow-2xl">
+            <div className="border border-[#C59B27]/40 rounded-sm p-6 sm:p-8 flex flex-col justify-between h-full bg-gradient-to-b from-[#FFFDF9] via-[#FAF6EE] to-[#F5EEDC]">
+              
+              <div>
+                {/* Header Badge & Title */}
+                <div className="text-center">
+                  <div className="flex items-center justify-center gap-2 mb-2 text-[#C59B27]">
+                    <span className="h-px w-8 bg-gradient-to-r from-transparent to-[#C59B27]/60" />
+                    <span className="text-xs">✦</span>
+                    <span className="h-px w-8 bg-gradient-to-l from-transparent to-[#C59B27]/60" />
+                  </div>
+                  <span className="font-sans-ui text-[10px] sm:text-[11px] uppercase tracking-[0.35em] text-[#C59B27] font-bold block mb-1">
+                    Joyous Gathering
+                  </span>
+                  <h3 className="font-display text-3xl sm:text-4xl text-primary font-bold tracking-tight">
+                    The Wedding Reception
+                  </h3>
+                  <p className="font-script text-2xl sm:text-3xl text-primary/80 mt-1">
+                    Dinner &amp; Fellowship
+                  </p>
+                </div>
+
+                {/* Date & Time Divider */}
+                <div className="my-6 py-3 border-y border-primary/15 text-center bg-secondary/30">
+                  <span className="font-display text-lg sm:text-xl font-bold tracking-wide text-primary block">
+                    Sunday, 1 November 2026
+                  </span>
+                  <span className="font-sans-ui text-xs uppercase tracking-[0.3em] text-[#C59B27] font-bold mt-1 block">
+                    Immediately Following Ceremony
+                  </span>
+                </div>
+
+                {/* Event Locations */}
+                <div className="space-y-4 text-center">
+                  <div className="space-y-1">
+                    <span className="font-sans-ui text-[10px] uppercase tracking-[0.3em] text-primary/70 font-semibold block">
+                      Banquet &amp; Celebration
+                    </span>
+                    <h4 className="font-display text-2xl font-bold text-primary">
+                      Sun Star Convention Centre
+                    </h4>
+                    <p className="font-body text-sm text-foreground/75">
+                      Arunapuram, Pala
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Action Button */}
+              <div className="mt-8 pt-5 border-t border-primary/15">
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Sun+Star+Convention+Centre+Arunapuram+Pala"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-sm bg-primary text-ivory hover:bg-wine-deep text-xs font-sans-ui uppercase tracking-[0.2em] font-semibold shadow-sm transition-all duration-300 hover:shadow-md cursor-pointer"
+                >
+                  <span>📍 Reception Location Map</span>
+                  <span className="text-sm">↗</span>
+                </a>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        {/* Joining the invitation & Contact details */}
+        <div className="mt-12 text-center max-w-2xl mx-auto rounded-sm border border-primary/20 bg-ivory/80 p-6 sm:p-7 shadow-sm">
+          <span className="font-sans-ui text-[11px] uppercase tracking-[0.35em] text-[#C59B27] font-bold block mb-2">
+            Joining the Invitation
+          </span>
+          <p className="font-display text-lg sm:text-xl text-primary font-semibold tracking-wide">
+            Dr. Jeswin &nbsp;|&nbsp; Dr. Jewel &nbsp;|&nbsp; Dr. Maria Elizabeth
+          </p>
+          <div className="mt-4 pt-3 border-t border-primary/15 flex flex-wrap items-center justify-center gap-3 text-xs sm:text-sm font-sans-ui text-foreground/80">
+            <span className="font-medium text-primary">Contact &amp; RSVP:</span>
+            <a href="tel:+919447141820" className="hover:text-primary underline font-semibold tracking-wider">
+              9447141820
+            </a>
+            <span>•</span>
+            <a href="tel:+919495525257" className="hover:text-primary underline font-semibold tracking-wider">
+              9495525257
+            </a>
+          </div>
         </div>
 
       </div>
@@ -778,20 +753,19 @@ function EventsBreakdownSection() {
 function EventCalendar() {
   const daysOfWeek = ["S", "M", "T", "W", "T", "F", "S"];
   
-  // October 2026 starts on Thursday (index 4)
+  // November 2026 starts on Sunday (index 0) and has 30 days
   const calendarCells = [
-    null, null, null, null, // Sun, Mon, Tue, Wed
-    1, 2, 3,
-    4, 5, 6, 7, 8, 9, 10,
-    11, 12, 13, 14, 15, 16, 17,
-    18, 19, 20, 21, 22, 23, 24, // 19 is Engagement (Mon), 22 is Wedding (Thu)
-    25, 26, 27, 28, 29, 30, 31
+    1, 2, 3, 4, 5, 6, 7,
+    8, 9, 10, 11, 12, 13, 14,
+    15, 16, 17, 18, 19, 20, 21,
+    22, 23, 24, 25, 26, 27, 28,
+    29, 30
   ];
 
   return (
     <div className="w-[300px] sm:w-[340px] bg-ivory text-primary p-6 sm:p-8 rounded-sm shadow-[var(--shadow-frame)] border border-sand/30 flex flex-col items-center select-none">
       <h3 className="font-script text-4xl sm:text-5xl text-primary mb-4">
-        October 2026
+        November 2026
       </h3>
       
       <div className="grid grid-cols-7 gap-2 w-full text-center border-b border-primary/20 pb-2 mb-2">
@@ -808,27 +782,14 @@ function EventCalendar() {
             return <div key={idx} className="aspect-square" />;
           }
           
-          if (day === 19) {
+          if (day === 1) {
             return (
-              <div key={idx} className="relative flex items-center justify-center aspect-square" title="Engagement · 19 Oct 2026">
-                <svg className="absolute w-[34px] h-[34px] sm:w-[38px] sm:h-[38px] text-[#C59B27] fill-current drop-shadow-sm animate-pulse" viewBox="0 0 24 24">
-                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-                </svg>
-                <span className="relative z-10 text-white font-sans-ui text-[12px] sm:text-[14px] font-bold">
-                  19
-                </span>
-              </div>
-            );
-          }
-
-          if (day === 22) {
-            return (
-              <div key={idx} className="relative flex items-center justify-center aspect-square" title="Wedding · 22 Oct 2026">
+              <div key={idx} className="relative flex items-center justify-center aspect-square" title="Wedding Ceremony & Reception · 1 Nov 2026">
                 <svg className="absolute w-[34px] h-[34px] sm:w-[38px] sm:h-[38px] text-wine fill-current drop-shadow-sm animate-pulse" viewBox="0 0 24 24">
                   <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
                 </svg>
                 <span className="relative z-10 text-white font-sans-ui text-[12px] sm:text-[14px] font-bold">
-                  22
+                  1
                 </span>
               </div>
             );
@@ -844,16 +805,10 @@ function EventCalendar() {
 
       <div className="mt-4 pt-3 border-t border-primary/15 flex items-center justify-center gap-5 text-[10px] sm:text-xs font-sans-ui uppercase tracking-wider text-primary/80">
         <span className="flex items-center gap-1.5 font-medium">
-          <svg className="w-3.5 h-3.5 text-[#C59B27] fill-current" viewBox="0 0 24 24">
-            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-          </svg>
-          19: Engagement
-        </span>
-        <span className="flex items-center gap-1.5 font-medium">
           <svg className="w-3.5 h-3.5 text-wine fill-current" viewBox="0 0 24 24">
             <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
           </svg>
-          22: Wedding
+          1 November: Wedding &amp; Reception
         </span>
       </div>
     </div>
@@ -945,30 +900,22 @@ function Venue() {
           </p>
         </div>
 
-        <div className="mt-16 grid gap-8 md:grid-cols-3 max-w-6xl mx-auto">
+        <div className="mt-16 grid gap-8 md:grid-cols-2 max-w-4xl mx-auto">
           <VenueCard
             badge="Holy Matrimony"
             icon="💒"
-            title="St. Mary's Church, Mevada, Pala"
-            subtitle="Thursday, 22 October 2026 · 10:30 AM"
-            address="Mevada, Pala, Kottayam, Kerala"
-            maps="https://www.google.com/maps/search/?api=1&query=St+Marys+Church+Mevada+Pala"
+            title="St. Joseph's Church, Kizhathadiyur, Pala"
+            subtitle="Sunday, 1 November 2026 · 12:15 PM"
+            address="Kizhathadiyur, Pala, Kottayam District, Kerala"
+            maps="https://www.google.com/maps/search/?api=1&query=St+Josephs+Church+Kizhathadiyur+Pala"
           />
           <VenueCard
             badge="Wedding Reception"
             icon="🥂"
-            title="St. George's Church Mutholy Auditorium"
-            subtitle="Thursday, 22 October 2026 · After Service"
-            address="Mutholy, Pala, Kottayam, Kerala"
-            maps="https://maps.app.goo.gl/RzZrRmYzSAMGoSVz6"
-          />
-          <VenueCard
-            badge="Engagement &amp; Reception"
-            icon="💍"
-            title="Vimala Matha Church, Kadalikkad"
-            subtitle="Monday, 19 October 2026 · 11:45 AM"
-            address="Kadalikkad, Muvattupuzha (Reception at Parish Auditorium)"
-            maps="https://www.google.com/maps/search/?api=1&query=Vimala+Matha+Church+Kadalikkad"
+            title="Sun Star Convention Centre"
+            subtitle="Sunday, 1 November 2026 · Immediately Following Ceremony"
+            address="Arunapuram, Pala, Kottayam District, Kerala"
+            maps="https://www.google.com/maps/search/?api=1&query=Sun+Star+Convention+Centre+Arunapuram+Pala"
           />
         </div>
       </div>
@@ -1017,16 +964,16 @@ function Footer() {
         Wedding Celebration
       </p>
       
-      {/* Couple Names - perfectly scaled for mobile so it never overflows or touches the edges */}
+      {/* Couple Names */}
       <h3 className="mt-2 font-script text-3xl sm:text-4xl md:text-5xl text-sand px-2 max-w-xl mx-auto leading-tight">
-        Abin Benny &amp; Rinu Vincent
+        Harry John &amp; Dr. Anju Agnes Tom
       </h3>
 
-      {/* Dates with delicate gold sparkle instead of heavy bullet */}
+      {/* Date */}
       <div className="mt-3 flex flex-wrap items-center justify-center gap-2 sm:gap-3 font-sans-ui text-[11px] sm:text-xs uppercase tracking-[0.25em] text-primary-foreground/85 px-2">
-        <span>19 · 10 · 2026</span>
+        <span>01 · 11 · 2026</span>
         <span className="text-[#C59B27] text-[10px]">✦</span>
-        <span>22 · 10 · 2026</span>
+        <span>Sunday, 12:15 PM</span>
       </div>
 
       {/* Royal heart ornament divider */}
@@ -1041,10 +988,28 @@ function Footer() {
       <p className="font-script text-xl sm:text-2xl md:text-3xl text-sand/90 px-4 max-w-lg mx-auto leading-relaxed">
         “Therefore what God has joined together, let no one separate.”
       </p>
-      <div className="mt-3">
-        <p className="font-body text-sm sm:text-base italic text-primary-foreground/85">
-          With best compliments from <strong className="font-semibold text-sand">Bibin Benny</strong>
+      <p className="font-sans-ui text-xs uppercase tracking-[0.3em] text-sand/70 mt-1">
+        — Mark 10:9 —
+      </p>
+
+      {/* Joining the invitation & Contact details */}
+      <div className="mt-6 pt-4 border-t border-sand/15 max-w-md mx-auto">
+        <span className="font-sans-ui text-[10px] uppercase tracking-[0.3em] text-[#C59B27] font-semibold block mb-1">
+          Joining the Invitation
+        </span>
+        <p className="font-display text-sm sm:text-base text-sand font-medium">
+          Dr. Jeswin &nbsp;|&nbsp; Dr. Jewel &nbsp;|&nbsp; Dr. Maria Elizabeth
         </p>
+        <div className="mt-3 flex items-center justify-center gap-2 text-xs font-sans-ui text-primary-foreground/85">
+          <span className="text-sand/70">Phone:</span>
+          <a href="tel:+919447141820" className="hover:text-sand underline font-semibold tracking-wider">
+            9447141820
+          </a>
+          <span>•</span>
+          <a href="tel:+919495525257" className="hover:text-sand underline font-semibold tracking-wider">
+            9495525257
+          </a>
+        </div>
       </div>
 
       {/* GRANDPIX Branding & WhatsApp Direct Inquiry Link */}

@@ -532,48 +532,92 @@ function WelcomeMessageSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch max-w-4xl mx-auto mt-10">
           
           {/* Groom Card */}
-          <div className="rounded-sm border border-primary/25 bg-secondary/30 p-7 sm:p-9 text-center shadow-[var(--shadow-soft)] flex flex-col justify-between">
-            <div>
-              <span className="font-sans-ui text-[10px] uppercase tracking-[0.4em] text-primary/70 font-semibold block mb-2">
-                The Groom
-              </span>
-              <h3 className="font-script text-4xl sm:text-5xl text-primary font-bold">
-                Harry John
-              </h3>
-            </div>
-            <div className="mt-6 pt-4 border-t border-primary/15 text-foreground/85 font-body text-sm sm:text-base leading-relaxed space-y-2">
-              <p className="font-medium text-foreground text-base">
-                Son of Mrs. Suja Mathew &amp; Dr. K. P. John
-              </p>
-              <p className="font-sans-ui text-xs uppercase tracking-wider text-primary/75">
-                Kadukappillil House, Palackattumala P.O., Marangattupilly, Kottayam District
-              </p>
-              <p className="font-body text-xs italic text-foreground/70 pt-2 border-t border-primary/10">
-                (Grandson of late Mrs. Annamma Philip &amp; Mr. K. J. Philip, Kadukappillil, Palackattumala and Mrs. Aleykutty K. S. &amp; late Mr. P. V. Mathai, Punnolil, Paingottoor)
-              </p>
+          <div className="relative rounded-md bg-ivory p-2 sm:p-2.5 shadow-[var(--shadow-frame)] border border-primary/20 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+            <div className="border border-[#C59B27]/40 rounded-sm p-6 sm:p-8 flex flex-col justify-between h-full bg-gradient-to-b from-[#FFFDF9] via-[#FAF6EE] to-[#F5EEDC] text-center">
+              
+              <div>
+                {/* Groom Royal Cameo Portrait */}
+                <div className="relative mx-auto mb-4 w-32 h-32 sm:w-36 sm:h-36 rounded-full p-1 border-2 border-[#C59B27]/50 bg-gradient-to-tr from-[#C59B27]/40 via-ivory to-primary/30 shadow-md group">
+                  <div className="relative w-full h-full rounded-full overflow-hidden border border-sand/40">
+                    <img
+                      src="/images/groom.jpg"
+                      alt="Harry John — The Groom"
+                      className="w-full h-full object-cover transition duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-center gap-2 mb-1 text-[#C59B27]">
+                  <span className="h-px w-6 bg-gradient-to-r from-transparent to-[#C59B27]/60" />
+                  <span className="font-sans-ui text-[10px] sm:text-[11px] uppercase tracking-[0.35em] font-bold">
+                    The Groom
+                  </span>
+                  <span className="h-px w-6 bg-gradient-to-l from-transparent to-[#C59B27]/60" />
+                </div>
+
+                <h3 className="font-script text-4xl sm:text-5xl text-primary font-bold mt-1">
+                  Harry John
+                </h3>
+              </div>
+
+              {/* Family Lineage */}
+              <div className="mt-6 pt-4 border-t border-primary/15 text-foreground/85 font-body text-sm sm:text-base leading-relaxed space-y-2">
+                <p className="font-display text-lg sm:text-xl font-bold text-primary">
+                  Son of Mrs. Suja Mathew &amp; Dr. K. P. John
+                </p>
+                <p className="font-sans-ui text-xs uppercase tracking-wider text-primary/75">
+                  Kadukappillil House, Palackattumala P.O., Marangattupilly, Kottayam District
+                </p>
+                <p className="font-body text-xs italic text-foreground/70 pt-2 border-t border-primary/10">
+                  (Grandson of late Mrs. Annamma Philip &amp; Mr. K. J. Philip, Kadukappillil, Palackattumala and Mrs. Aleykutty K. S. &amp; late Mr. P. V. Mathai, Punnolil, Paingottoor)
+                </p>
+              </div>
+
             </div>
           </div>
 
           {/* Bride Card */}
-          <div className="rounded-sm border border-primary/25 bg-secondary/30 p-7 sm:p-9 text-center shadow-[var(--shadow-soft)] flex flex-col justify-between">
-            <div>
-              <span className="font-sans-ui text-[10px] uppercase tracking-[0.4em] text-primary/70 font-semibold block mb-2">
-                The Bride
-              </span>
-              <h3 className="font-script text-4xl sm:text-5xl text-primary font-bold">
-                Dr. Anju Agnes Tom
-              </h3>
-            </div>
-            <div className="mt-6 pt-4 border-t border-primary/15 text-foreground/85 font-body text-sm sm:text-base leading-relaxed space-y-2">
-              <p className="font-medium text-foreground text-base">
-                Daughter of Mrs. Jessy Thomas &amp; Mr. K. J. Thomas
-              </p>
-              <p className="font-sans-ui text-xs uppercase tracking-wider text-primary/75">
-                Kollikulavil House, Koovappally, Kanjirappally, Kottayam District
-              </p>
-              <p className="font-body text-xs italic text-foreground/70 pt-2 border-t border-primary/10">
-                (Granddaughter of Late Mariakutty &amp; Late K. V. Joseph, Kollikulavil, Koovappally, and Late Aleykutty Joseph &amp; Late Adv. P. J. Joseph Panamthottam, Chunkappara)
-              </p>
+          <div className="relative rounded-md bg-ivory p-2 sm:p-2.5 shadow-[var(--shadow-frame)] border border-primary/20 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+            <div className="border border-[#C59B27]/40 rounded-sm p-6 sm:p-8 flex flex-col justify-between h-full bg-gradient-to-b from-[#FFFDF9] via-[#FAF6EE] to-[#F5EEDC] text-center">
+              
+              <div>
+                {/* Bride Royal Cameo Portrait */}
+                <div className="relative mx-auto mb-4 w-32 h-32 sm:w-36 sm:h-36 rounded-full p-1 border-2 border-[#C59B27]/50 bg-gradient-to-tr from-[#C59B27]/40 via-ivory to-primary/30 shadow-md group">
+                  <div className="relative w-full h-full rounded-full overflow-hidden border border-sand/40">
+                    <img
+                      src="/images/bride.jpg"
+                      alt="Dr. Anju Agnes Tom — The Bride"
+                      className="w-full h-full object-cover transition duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-center gap-2 mb-1 text-[#C59B27]">
+                  <span className="h-px w-6 bg-gradient-to-r from-transparent to-[#C59B27]/60" />
+                  <span className="font-sans-ui text-[10px] sm:text-[11px] uppercase tracking-[0.35em] font-bold">
+                    The Bride
+                  </span>
+                  <span className="h-px w-6 bg-gradient-to-l from-transparent to-[#C59B27]/60" />
+                </div>
+
+                <h3 className="font-script text-4xl sm:text-5xl text-primary font-bold mt-1">
+                  Dr. Anju Agnes Tom
+                </h3>
+              </div>
+
+              {/* Family Lineage */}
+              <div className="mt-6 pt-4 border-t border-primary/15 text-foreground/85 font-body text-sm sm:text-base leading-relaxed space-y-2">
+                <p className="font-display text-lg sm:text-xl font-bold text-primary">
+                  Daughter of Mrs. Jessy Thomas &amp; Mr. K. J. Thomas
+                </p>
+                <p className="font-sans-ui text-xs uppercase tracking-wider text-primary/75">
+                  Kollikulavil House, Koovappally, Kanjirappally, Kottayam District
+                </p>
+                <p className="font-body text-xs italic text-foreground/70 pt-2 border-t border-primary/10">
+                  (Granddaughter of Late Mariakutty &amp; Late K. V. Joseph, Kollikulavil, Koovappally, and Late Aleykutty Joseph &amp; Late Adv. P. J. Joseph Panamthottam, Chunkappara)
+                </p>
+              </div>
+
             </div>
           </div>
 

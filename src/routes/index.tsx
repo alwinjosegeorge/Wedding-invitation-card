@@ -748,26 +748,6 @@ function EventsBreakdownSection() {
 
         </div>
 
-        {/* Joining the invitation & Contact details */}
-        <div className="mt-12 text-center max-w-2xl mx-auto rounded-sm border border-primary/20 bg-ivory/80 p-6 sm:p-7 shadow-sm">
-          <span className="font-sans-ui text-[11px] uppercase tracking-[0.35em] text-[#C59B27] font-bold block mb-2">
-            Joining the Invitation
-          </span>
-          <p className="font-display text-lg sm:text-xl text-primary font-semibold tracking-wide">
-            Dr. Jeswin &nbsp;|&nbsp; Dr. Jewel &nbsp;|&nbsp; Dr. Maria Elizabeth
-          </p>
-          <div className="mt-4 pt-3 border-t border-primary/15 flex flex-wrap items-center justify-center gap-3 text-xs sm:text-sm font-sans-ui text-foreground/80">
-            <span className="font-medium text-primary">Contact &amp; RSVP:</span>
-            <a href="tel:+919447141820" className="hover:text-primary underline font-semibold tracking-wider">
-              9447141820
-            </a>
-            <span>•</span>
-            <a href="tel:+919495525257" className="hover:text-primary underline font-semibold tracking-wider">
-              9495525257
-            </a>
-          </div>
-        </div>
-
       </div>
     </section>
   );
@@ -1016,26 +996,6 @@ function Footer() {
       <p className="font-sans-ui text-xs uppercase tracking-[0.3em] text-sand/70 mt-1">
         — Mark 10:9 —
       </p>
-
-      {/* Joining the invitation & Contact details */}
-      <div className="mt-6 pt-4 border-t border-sand/15 max-w-md mx-auto">
-        <span className="font-sans-ui text-[10px] uppercase tracking-[0.3em] text-[#C59B27] font-semibold block mb-1">
-          Joining the Invitation
-        </span>
-        <p className="font-display text-sm sm:text-base text-sand font-medium">
-          Dr. Jeswin &nbsp;|&nbsp; Dr. Jewel &nbsp;|&nbsp; Dr. Maria Elizabeth
-        </p>
-        <div className="mt-3 flex items-center justify-center gap-2 text-xs font-sans-ui text-primary-foreground/85">
-          <span className="text-sand/70">Phone:</span>
-          <a href="tel:+919447141820" className="hover:text-sand underline font-semibold tracking-wider">
-            9447141820
-          </a>
-          <span>•</span>
-          <a href="tel:+919495525257" className="hover:text-sand underline font-semibold tracking-wider">
-            9495525257
-          </a>
-        </div>
-      </div>
 
       {/* GRANDPIX Branding & WhatsApp Direct Inquiry Link */}
       <div className="mt-14 pt-8 border-t border-sand/15 flex flex-col items-center justify-center">

@@ -39,42 +39,42 @@ export const Route = createFileRoute("/")({
   component: CelebrationApp,
 });
 
-const galleryImgs: { src: string; alt: string; cls: string; pos?: string }[] = [
+const galleryImgs: { src: string; alt: string; subtitle?: string; pos?: string }[] = [
   {
     src: "/images/couple-04.jpg",
-    alt: "Harry & Dr. Anju — Forever Together",
-    cls: "col-span-1 sm:col-span-2 md:col-span-2 md:row-span-2 h-[380px] sm:h-[480px] md:h-full",
-    pos: "object-[center_20%]",
+    alt: "Harry & Dr. Anju",
+    subtitle: "Forever Together",
+    pos: "object-center",
   },
   {
     src: "/images/couple-01.jpg",
     alt: "Blessings in Holy Matrimony",
-    cls: "col-span-1 md:col-span-1 md:row-span-1 h-[280px] sm:h-[320px] md:h-full",
-    pos: "object-[center_30%]",
+    subtitle: "Sacred Church Ceremony",
+    pos: "object-[center_35%]",
   },
   {
     src: "/images/couple-03.jpg",
     alt: "Two Hearts United in Love",
-    cls: "col-span-1 md:col-span-1 md:row-span-1 h-[280px] sm:h-[320px] md:h-full",
-    pos: "object-[center_30%]",
+    subtitle: "Cherished Embrace",
+    pos: "object-center",
   },
   {
     src: "/images/couple-02.jpg",
     alt: "Walking Hand in Hand Forever",
-    cls: "col-span-1 md:col-span-1 md:row-span-1 h-[280px] sm:h-[320px] md:h-full",
-    pos: "object-[center_35%]",
+    subtitle: "Scenic Mountain Walk",
+    pos: "object-center",
   },
   {
     src: "/images/couple-05.jpg",
     alt: "Grace & Sacred Traditions",
-    cls: "col-span-1 md:col-span-1 md:row-span-1 h-[280px] sm:h-[320px] md:h-full",
-    pos: "object-[center_30%]",
+    subtitle: "Royal Heritage",
+    pos: "object-center",
   },
   {
     src: "/images/couple-06.jpg",
     alt: "A Lifetime of Smiles & Joy",
-    cls: "col-span-1 sm:col-span-2 md:col-span-1 md:row-span-1 h-[280px] sm:h-[320px] md:h-full",
-    pos: "object-[center_25%]",
+    subtitle: "Joyous Beginnings",
+    pos: "object-center",
   },
 ];
 
@@ -856,38 +856,65 @@ function CountdownSection() {
 
 function Gallery({ onOpenLightbox }: { onOpenLightbox: (index: number) => void }) {
   return (
-    <section id="gallery" className="bg-secondary py-24">
-      <div className="mx-auto max-w-6xl px-6 text-center">
+    <section id="gallery" className="relative bg-secondary/60 py-20 sm:py-24 px-4 sm:px-6">
+      <div className="mx-auto max-w-6xl text-center">
         <Ornament label="Love &amp; Togetherness" />
-        <h2 className="font-display text-5xl text-primary sm:text-6xl">Photo Gallery</h2>
-        <p className="mx-auto mt-4 max-w-md font-body italic text-foreground/75">
-          Glimpses of love, joy, and cherished celebrations.
+        <h2 className="font-display text-5xl text-primary sm:text-6xl tracking-tight">Photo Gallery</h2>
+        <p className="mx-auto mt-4 max-w-lg font-body text-base sm:text-lg italic text-foreground/80 leading-relaxed">
+          Glimpses of love, sacred promises, and the joyous beginning of our forever.
         </p>
       </div>
-      <div className="mx-auto mt-14 grid max-w-6xl grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 px-4 sm:px-6 md:auto-rows-[300px]">
+
+      {/* Luxury Royal Gallery Grid - 3 columns on desktop, 2 on tablet, perfectly preserving 2:3 portrait grandeur with zero cropping */}
+      <div className="mx-auto mt-12 sm:mt-16 grid max-w-6xl grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-7">
         {galleryImgs.map((g, i) => (
-          <figure
+          <div
             key={i}
             onClick={() => onOpenLightbox(i)}
-            className={`group relative overflow-hidden rounded-sm border border-primary/25 bg-ivory shadow-[var(--shadow-soft)] cursor-pointer transition-all duration-300 hover:border-primary/60 hover:shadow-xl ${g.cls}`}
+            className="group relative rounded-sm p-2 sm:p-2.5 bg-ivory shadow-[0_10px_30px_rgba(0,0,0,0.06)] border border-sand/40 hover:border-sand hover:shadow-[0_20px_45px_rgba(127,1,31,0.14)] hover:-translate-y-1.5 transition-all duration-500 cursor-pointer"
           >
-            <img
-              src={g.src}
-              alt={g.alt}
-              loading="lazy"
-              className={`h-full w-full object-cover transition duration-700 group-hover:scale-105 ${g.pos || "object-center"}`}
-            />
-            {/* Subtle Zoom Pill on Hover */}
-            <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10">
-              <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-black/50 text-white backdrop-blur-sm text-xs border border-white/20 shadow-sm">
-                🔍
-              </span>
+            {/* Outer Gold Hairline Frame with true 2:3 portrait aspect ratio */}
+            <div className="relative overflow-hidden rounded-[2px] border border-sand/30 aspect-[2/3] w-full bg-sand/10">
+              <img
+                src={g.src}
+                alt={g.alt}
+                loading="lazy"
+                className={`h-full w-full object-cover transition duration-700 ease-out group-hover:scale-105 ${g.pos || "object-center"}`}
+              />
+
+              {/* Elegant Gold Corner Accents */}
+              <div className="absolute top-2 left-2 w-3.5 h-3.5 border-t border-l border-sand/70 pointer-events-none opacity-60 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute top-2 right-2 w-3.5 h-3.5 border-t border-r border-sand/70 pointer-events-none opacity-60 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute bottom-2 left-2 w-3.5 h-3.5 border-b border-l border-sand/70 pointer-events-none opacity-60 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute bottom-2 right-2 w-3.5 h-3.5 border-b border-r border-sand/70 pointer-events-none opacity-60 group-hover:opacity-100 transition-opacity" />
+
+              {/* Floating Magnify Glass Pill */}
+              <div className="absolute top-3.5 right-3.5 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none z-10 transform translate-y-1 group-hover:translate-y-0">
+                <span className="inline-flex items-center gap-1.5 py-1 px-2.5 rounded-full bg-black/60 text-white backdrop-blur-md text-[11px] font-sans-ui uppercase tracking-wider border border-white/20 shadow-md">
+                  <span>View</span>
+                  <span className="text-xs">↗</span>
+                </span>
+              </div>
+
+              {/* Subtle Gradient & Bottom Title Bar */}
+              <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/85 via-black/40 to-transparent text-white drop-shadow-sm transition-opacity duration-300">
+                <span className="font-sans-ui text-[10px] uppercase tracking-[0.3em] text-sand/90 font-medium block">
+                  {g.subtitle}
+                </span>
+                <p className="font-display text-lg sm:text-xl font-medium tracking-wide text-white mt-0.5 leading-snug">
+                  {g.alt}
+                </p>
+              </div>
             </div>
-            <figcaption className="absolute bottom-0 inset-x-0 p-3.5 bg-gradient-to-t from-black/85 via-black/45 to-transparent text-white text-xs sm:text-sm font-sans-ui tracking-wider drop-shadow-sm opacity-0 group-hover:opacity-100 transition duration-300">
-              {g.alt}
-            </figcaption>
-          </figure>
+          </div>
         ))}
+      </div>
+
+      {/* Helpful Hint */}
+      <div className="mt-8 text-center">
+        <p className="font-sans-ui text-xs uppercase tracking-[0.25em] text-primary/60">
+          ✦ Click any photo to view in high resolution ✦
+        </p>
       </div>
     </section>
   );

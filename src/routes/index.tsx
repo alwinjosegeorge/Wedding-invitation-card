@@ -286,6 +286,7 @@ function LightboxModal({
 }) {
   if (currentIndex === null) return null;
 
+  const [downloading, setDownloading] = useState(false);
   const currentImage = images[currentIndex];
 
   const handlePrev = (e: React.MouseEvent) => {
@@ -298,31 +299,88 @@ function LightboxModal({
     onNavigate((currentIndex + 1) % images.length);
   };
 
+  const handleDownload = async (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (downloading) return;
+    setDownloading(true);
+
+    try {
+      const response = await fetch(currentImage.src);
+      const blob = await response.blob();
+      const blobUrl = window.URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = blobUrl;
+      const cleanName = (currentImage.alt || "wedding-photo")
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-|-$/g, "");
+      link.download = `${cleanName || "wedding-photo"}-${currentIndex + 1}.jpg`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(blobUrl);
+    } catch {
+      // Fallback
+      const link = document.createElement("a");
+      link.href = currentImage.src;
+      link.download = `harry-anju-wedding-${currentIndex + 1}.jpg`;
+      link.target = "_blank";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } finally {
+      setTimeout(() => setDownloading(false), 800);
+    }
+  };
+
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-md p-4 animate-fade-up select-none"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-md p-3 sm:p-4 animate-fade-up select-none"
       onClick={onClose}
     >
-      {/* Close Button */}
-      <button
-        onClick={onClose}
-        className="absolute top-6 right-6 z-50 text-white/80 hover:text-white p-3 rounded-full bg-black/40 border border-white/25 transition hover:scale-110 cursor-pointer"
-        aria-label="Close Lightbox"
-      >
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <line x1="18" y1="6" x2="6" y2="18" />
-          <line x1="6" y1="6" x2="18" y2="18" />
-        </svg>
-      </button>
+      {/* Top Action Controls (Download & Close) */}
+      <div className="absolute top-4 sm:top-6 right-4 sm:right-6 z-50 flex items-center gap-2 sm:gap-3">
+        <button
+          onClick={handleDownload}
+          disabled={downloading}
+          className="inline-flex items-center gap-1.5 py-2 px-3 sm:px-4 rounded-full bg-black/60 hover:bg-sand hover:text-wine-deep text-white border border-white/25 hover:border-sand transition-all duration-300 shadow-lg text-xs font-sans-ui uppercase tracking-wider font-semibold cursor-pointer disabled:opacity-60"
+          title="Download photo"
+        >
+          {downloading ? (
+            <svg className="animate-spin h-3.5 w-3.5 text-current" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg>
+          ) : (
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+          )}
+          <span>{downloading ? "Saving..." : "Download"}</span>
+        </button>
+
+        <button
+          onClick={onClose}
+          className="p-2 sm:p-2.5 rounded-full bg-black/60 hover:bg-black/90 text-white/90 hover:text-white border border-white/25 transition-all duration-300 hover:scale-110 cursor-pointer shadow-lg"
+          aria-label="Close Lightbox"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+      </div>
 
       {/* Prev Arrow */}
       {images.length > 1 && (
         <button
           onClick={handlePrev}
-          className="absolute left-4 sm:left-8 z-50 text-white/80 hover:text-white p-3.5 rounded-full bg-black/40 border border-white/25 transition hover:scale-110 cursor-pointer"
+          className="absolute left-2 sm:left-6 z-50 text-white/80 hover:text-white p-3 sm:p-3.5 rounded-full bg-black/40 hover:bg-black/70 border border-white/25 transition hover:scale-110 cursor-pointer"
           aria-label="Previous Image"
         >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
             <polyline points="15 18 9 12 15 6" />
           </svg>
         </button>
@@ -330,22 +388,39 @@ function LightboxModal({
 
       {/* Main Image View */}
       <div
-        className="relative max-w-5xl max-h-[85vh] flex flex-col items-center justify-center p-2"
+        className="relative max-w-5xl max-h-[90vh] flex flex-col items-center justify-center p-2"
         onClick={(e) => e.stopPropagation()}
       >
         <img
           src={currentImage.src}
           alt={currentImage.alt}
-          className="max-w-full max-h-[78vh] object-contain rounded-sm border border-white/20 shadow-2xl"
+          className="max-w-full max-h-[72vh] sm:max-h-[76vh] object-contain rounded-sm border border-white/20 shadow-2xl"
         />
-        <div className="mt-3 flex flex-wrap items-center justify-center gap-2.5">
-          <p className="font-sans-ui text-xs sm:text-sm text-sand tracking-widest text-center drop-shadow-md">
-            {currentImage.alt}
-          </p>
-          <span className="text-white/40">•</span>
-          <span className="font-sans-ui text-xs text-white/70 tracking-widest">
-            {currentIndex + 1} / {images.length}
-          </span>
+
+        {/* Caption & Quick Download Button */}
+        <div className="mt-3 flex flex-col items-center gap-2">
+          <div className="flex flex-wrap items-center justify-center gap-2.5 text-center px-2">
+            <p className="font-sans-ui text-xs sm:text-sm text-sand tracking-widest text-center drop-shadow-md font-medium">
+              {currentImage.alt}
+            </p>
+            <span className="text-white/40">•</span>
+            <span className="font-sans-ui text-xs text-white/70 tracking-widest">
+              {currentIndex + 1} / {images.length}
+            </span>
+          </div>
+
+          <button
+            onClick={handleDownload}
+            disabled={downloading}
+            className="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-sand hover:bg-white text-wine-deep font-sans-ui text-xs uppercase tracking-wider font-bold shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer disabled:opacity-60"
+          >
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            <span>{downloading ? "Downloading..." : "Download Photo"}</span>
+          </button>
         </div>
       </div>
 
@@ -353,10 +428,10 @@ function LightboxModal({
       {images.length > 1 && (
         <button
           onClick={handleNext}
-          className="absolute right-4 sm:right-8 z-50 text-white/80 hover:text-white p-3.5 rounded-full bg-black/40 border border-white/25 transition hover:scale-110 cursor-pointer"
+          className="absolute right-2 sm:right-6 z-50 text-white/80 hover:text-white p-3 sm:p-3.5 rounded-full bg-black/40 hover:bg-black/70 border border-white/25 transition hover:scale-110 cursor-pointer"
           aria-label="Next Image"
         >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
             <polyline points="9 18 15 12 9 6" />
           </svg>
         </button>

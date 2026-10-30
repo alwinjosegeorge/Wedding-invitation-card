@@ -611,20 +611,24 @@ function WelcomeMessageSection() {
             <div className="border border-[#C59B27]/40 rounded-sm p-6 sm:p-8 flex flex-col justify-between h-full bg-gradient-to-b from-[#FFFDF9] via-[#FAF6EE] to-[#F5EEDC] text-center">
               
               <div>
-                {/* Groom Royal Cameo Portrait */}
-                <div className="relative mx-auto mb-4 w-32 h-32 sm:w-36 sm:h-36 rounded-full p-1 border-2 border-[#C59B27]/50 bg-gradient-to-tr from-[#C59B27]/40 via-ivory to-primary/30 shadow-md group">
-                  <div className="relative w-full h-full rounded-full overflow-hidden border border-sand/40">
-                    <img
-                      src="/images/groom.jpg"
-                      alt="Harry John — The Groom"
-                      className="w-full h-full object-cover transition duration-500 group-hover:scale-105"
+                {/* Royal Gold Crest Motif */}
+                <div className="flex items-center justify-center gap-3 mb-3 text-[#C59B27]">
+                  <span className="h-px w-8 bg-gradient-to-r from-transparent to-[#C59B27]/60" />
+                  <svg width="20" height="20" viewBox="0 0 32 32" fill="none" className="text-[#C59B27]" aria-hidden>
+                    <path
+                      d="M16 3l2.6 8 8.4.6-6.5 5.4 2.1 8.2L16 20.8 9.4 25.2l2.1-8.2L5 11.6 13.4 11 16 3z"
+                      stroke="currentColor"
+                      strokeWidth="1.2"
+                      fill="none"
                     />
-                  </div>
+                    <circle cx="16" cy="16" r="2.5" fill="currentColor" />
+                  </svg>
+                  <span className="h-px w-8 bg-gradient-to-l from-transparent to-[#C59B27]/60" />
                 </div>
 
                 <div className="flex items-center justify-center gap-2 mb-1 text-[#C59B27]">
                   <span className="h-px w-6 bg-gradient-to-r from-transparent to-[#C59B27]/60" />
-                  <span className="font-sans-ui text-[10px] sm:text-[11px] uppercase tracking-[0.35em] font-bold">
+                  <span className="font-sans-ui text-[10px] sm:text-[11px] uppercase tracking-[0.35em] font-bold text-[#8C6D1F]">
                     The Groom
                   </span>
                   <span className="h-px w-6 bg-gradient-to-l from-transparent to-[#C59B27]/60" />
@@ -656,20 +660,24 @@ function WelcomeMessageSection() {
             <div className="border border-[#C59B27]/40 rounded-sm p-6 sm:p-8 flex flex-col justify-between h-full bg-gradient-to-b from-[#FFFDF9] via-[#FAF6EE] to-[#F5EEDC] text-center">
               
               <div>
-                {/* Bride Royal Cameo Portrait */}
-                <div className="relative mx-auto mb-4 w-32 h-32 sm:w-36 sm:h-36 rounded-full p-1 border-2 border-[#C59B27]/50 bg-gradient-to-tr from-[#C59B27]/40 via-ivory to-primary/30 shadow-md group">
-                  <div className="relative w-full h-full rounded-full overflow-hidden border border-sand/40">
-                    <img
-                      src="/images/bride.jpg"
-                      alt="Dr. Anju Agnes Tom — The Bride"
-                      className="w-full h-full object-cover transition duration-500 group-hover:scale-105"
+                {/* Royal Gold Crest Motif */}
+                <div className="flex items-center justify-center gap-3 mb-3 text-[#C59B27]">
+                  <span className="h-px w-8 bg-gradient-to-r from-transparent to-[#C59B27]/60" />
+                  <svg width="20" height="20" viewBox="0 0 32 32" fill="none" className="text-[#C59B27]" aria-hidden>
+                    <path
+                      d="M16 3l2.6 8 8.4.6-6.5 5.4 2.1 8.2L16 20.8 9.4 25.2l2.1-8.2L5 11.6 13.4 11 16 3z"
+                      stroke="currentColor"
+                      strokeWidth="1.2"
+                      fill="none"
                     />
-                  </div>
+                    <circle cx="16" cy="16" r="2.5" fill="currentColor" />
+                  </svg>
+                  <span className="h-px w-8 bg-gradient-to-l from-transparent to-[#C59B27]/60" />
                 </div>
 
                 <div className="flex items-center justify-center gap-2 mb-1 text-[#C59B27]">
                   <span className="h-px w-6 bg-gradient-to-r from-transparent to-[#C59B27]/60" />
-                  <span className="font-sans-ui text-[10px] sm:text-[11px] uppercase tracking-[0.35em] font-bold">
+                  <span className="font-sans-ui text-[10px] sm:text-[11px] uppercase tracking-[0.35em] font-bold text-[#8C6D1F]">
                     The Bride
                   </span>
                   <span className="h-px w-6 bg-gradient-to-l from-transparent to-[#C59B27]/60" />

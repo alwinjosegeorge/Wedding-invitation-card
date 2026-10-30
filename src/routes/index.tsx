@@ -40,17 +40,42 @@ export const Route = createFileRoute("/")({
 });
 
 const galleryImgs: { src: string; alt: string; cls: string; pos?: string }[] = [
-  { src: "/images/wedding-01.jpg", alt: "Harry & Anju — In Holy Matrimony", cls: "col-span-2 row-span-2", pos: "object-[center_60%]" },
-  { src: "/images/wedding-02.jpg", alt: "A Sacred Promise", cls: "col-span-1 row-span-1", pos: "object-[center_65%]" },
-  { src: "/images/wedding-03.jpg", alt: "Two Hearts United", cls: "col-span-1 row-span-1", pos: "object-[center_55%]" },
-  { src: "/images/wedding-04.jpg", alt: "Cherished Moments", cls: "col-span-1 row-span-1", pos: "object-[center_50%]" },
-  { src: "/images/wedding-06.jpg", alt: "Joyful Beginnings", cls: "col-span-1 row-span-1", pos: "object-[center_35%]" },
-  { src: "/images/wedding-07.jpg", alt: "Forever & Always", cls: "col-span-1 row-span-1", pos: "object-center" },
-  { src: "/images/wedding-12.jpg", alt: "Endless Happiness", cls: "col-span-1 row-span-1", pos: "object-[center_55%]" },
-  { src: "/images/wedding-08.jpg", alt: "Blessed by Love", cls: "col-span-2 row-span-2", pos: "object-[center_65%]" },
-  { src: "/images/wedding-11.jpg", alt: "Together in Every Step", cls: "col-span-2 row-span-1", pos: "object-center" },
-  { src: "/images/wedding-14.jpg", alt: "Grace & Radiance", cls: "col-span-2 md:col-span-2 row-span-2", pos: "object-[center_55%]" },
-  { src: "/images/wedding-15.jpg", alt: "A Celebration of Love", cls: "col-span-2 md:col-span-4 row-span-2 min-h-[380px] sm:min-h-[560px]", pos: "object-[center_75%]" },
+  {
+    src: "/images/couple-04.jpg",
+    alt: "Harry & Dr. Anju — Forever Together",
+    cls: "col-span-1 sm:col-span-2 md:col-span-2 md:row-span-2 h-[380px] sm:h-[480px] md:h-full",
+    pos: "object-[center_20%]",
+  },
+  {
+    src: "/images/couple-01.jpg",
+    alt: "Blessings in Holy Matrimony",
+    cls: "col-span-1 md:col-span-1 md:row-span-1 h-[280px] sm:h-[320px] md:h-full",
+    pos: "object-[center_30%]",
+  },
+  {
+    src: "/images/couple-03.jpg",
+    alt: "Two Hearts United in Love",
+    cls: "col-span-1 md:col-span-1 md:row-span-1 h-[280px] sm:h-[320px] md:h-full",
+    pos: "object-[center_30%]",
+  },
+  {
+    src: "/images/couple-02.jpg",
+    alt: "Walking Hand in Hand Forever",
+    cls: "col-span-1 md:col-span-1 md:row-span-1 h-[280px] sm:h-[320px] md:h-full",
+    pos: "object-[center_35%]",
+  },
+  {
+    src: "/images/couple-05.jpg",
+    alt: "Grace & Sacred Traditions",
+    cls: "col-span-1 md:col-span-1 md:row-span-1 h-[280px] sm:h-[320px] md:h-full",
+    pos: "object-[center_30%]",
+  },
+  {
+    src: "/images/couple-06.jpg",
+    alt: "A Lifetime of Smiles & Joy",
+    cls: "col-span-1 sm:col-span-2 md:col-span-1 md:row-span-1 h-[280px] sm:h-[320px] md:h-full",
+    pos: "object-[center_25%]",
+  },
 ];
 
 function CelebrationApp() {
@@ -859,7 +884,7 @@ function Gallery({ onOpenLightbox }: { onOpenLightbox: (index: number) => void }
           Glimpses of love, joy, and cherished celebrations.
         </p>
       </div>
-      <div className="mx-auto mt-14 grid max-w-6xl grid-cols-2 md:grid-cols-4 gap-4 sm:gap-5 px-4 sm:px-6 auto-rows-[220px] sm:auto-rows-[270px]">
+      <div className="mx-auto mt-14 grid max-w-6xl grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 px-4 sm:px-6 md:auto-rows-[300px]">
         {galleryImgs.map((g, i) => (
           <figure
             key={i}

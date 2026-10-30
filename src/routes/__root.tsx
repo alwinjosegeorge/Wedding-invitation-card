@@ -93,8 +93,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "Sunday, 1 November 2026 · St. Joseph's Church, Kizhathadiyur, Pala & Sun Star Convention Centre, Arunapuram. Mark 10:9.",
       },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c44f6b7e-38e9-4205-a38d-46592ca4ebc0/id-preview-4426dc8c--b4f8d89d-eea4-4a2e-b264-70fa7942236f.lovable.app-1783741208945.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c44f6b7e-38e9-4205-a38d-46592ca4ebc0/id-preview-4426dc8c--b4f8d89d-eea4-4a2e-b264-70fa7942236f.lovable.app-1783741208945.png" },
+      { property: "og:image", content: "/images/og-preview.jpg" },
+      { name: "twitter:image", content: "/images/og-preview.jpg" },
     ],
     links: [
       {
